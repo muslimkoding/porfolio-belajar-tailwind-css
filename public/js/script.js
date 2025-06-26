@@ -1,6 +1,7 @@
 // hamburger
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('#nav-menu');
+const backToTopButton = document.getElementById('back-to-top');
 
 hamburger.addEventListener('click', function() {
   hamburger.classList.toggle('hamburger-active');
@@ -30,6 +31,7 @@ hamburger.addEventListener('click', function() {
 //   }
 // });
 
+// navbar akan sembunyi ketika di scroll kebawah dan akan tampil ketika di scroll keatas dan fixed
 let lastScroll = 0;
 const header = document.querySelector('header');
 
@@ -50,4 +52,27 @@ window.addEventListener('scroll', () => {
   }
   
   lastScroll = currentScroll;
+});
+
+// tombol back to top
+// Back to Top Button Logic
+
+window.addEventListener('scroll', () => {
+  // Tampilkan tombol ketika scroll lebih dari 300px dari atas
+  if (window.scrollY > 300) {
+    backToTopButton.classList.remove('hidden');
+    backToTopButton.classList.add('flex'); // atau 'block' tergantung kebutuhan
+  } else {
+    backToTopButton.classList.add('hidden');
+    backToTopButton.classList.remove('flex');
+  }
+});
+
+// Smooth scroll ke atas ketika diklik
+backToTopButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
