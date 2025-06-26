@@ -84,3 +84,59 @@ backToTopButton.addEventListener('click', (e) => {
     behavior: 'smooth'
   });
 });
+
+// darkmode toggle manual, tidak berpengaruh terhadap preference system
+const darkToggle = document.querySelector('#dark-toggle');
+const html = document.querySelector('html');
+
+// Cek localStorage untuk preferensi user
+if (localStorage.getItem('darkMode')) {  // Di sini ditambahkan tanda penutup )
+  html.classList.add('dark');
+  darkToggle.checked = true;
+}
+
+darkToggle.addEventListener('click', function() {
+  if (darkToggle.checked) {
+    html.classList.add('dark');
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    html.classList.remove('dark');
+    localStorage.removeItem('darkMode');
+  }
+});
+
+// // darkmode toggle VERSI YANG LEBIH ROBUS dan mendeteksi preference system terlebih dahulu
+// const darkToggle = document.querySelector('#dark-toggle');
+// const html = document.querySelector('html');
+
+// // Cek preferensi sistem saat pertama load
+// if (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//   applyDarkMode(true);
+// }
+
+// // Fungsi untuk mengaplikasikan dark mode
+// function applyDarkMode(isDark) {
+//   if (isDark) {
+//     html.classList.add('dark');
+//     darkToggle.checked = true;
+//     localStorage.setItem('darkMode', 'enabled');
+//   } else {
+//     html.classList.remove('dark');
+//     darkToggle.checked = false;
+//     localStorage.removeItem('darkMode');
+//   }
+// }
+
+// // Cek preferensi user saat pertama load
+// const savedMode = localStorage.getItem('darkMode');
+// applyDarkMode(savedMode === 'enabled');
+
+// // Event listener untuk toggle
+// darkToggle.addEventListener('click', () => {
+//   applyDarkMode(darkToggle.checked);
+// });
+
+// // Optional: Sesuaikan dengan preferensi sistem
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+//   applyDarkMode(e.matches);
+// });

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #14b8a6;
   --color-secondary: #64748b;
@@ -38,7 +40,7 @@ body {
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-gray-400;
+  @apply w-[30px] h-[2px] my-2 block bg-gray-400 dark:bg-slate-300;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -59,3 +61,12 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
 } */
+
+/* Custom dark mode toggle circle */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+
+html {
+  transition: background-color 300ms ease;
+}

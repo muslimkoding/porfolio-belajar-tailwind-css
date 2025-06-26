@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porftolio Tailwind CSS 4</title>
-    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="public/css/output.css" />
   </head>
   <body>
     <!-- ========================================== navbar section start ========================================== -->
     <header
-      class="fixed top-0 left-0 z-[9999] flex w-full items-center border-b border-white/20 bg-white/70 backdrop-blur-sm transition-all duration-300"
+      class="dark:border-dark/20 dark:bg-dark/70 fixed top-0 left-0 z-[9999] flex w-full items-center border-b border-white/20 bg-white/70 backdrop-blur-sm transition-all duration-300 dark:backdrop-blur-sm"
     >
       <div class="container">
         <div class="relative flex items-center justify-between">
@@ -38,50 +38,66 @@
 
             <nav
               id="nav-menu"
-              class="absolute top-full right-4 hidden w-full max-w-[250px] rounded-l-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
+              class="dark:bg-dark lg:dark:bg-transparent absolute top-full right-4 hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none dark:shadow-slate-800"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Tentang Saya</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#clients"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Clients</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#blog"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Blog</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base"
+                    class="text-dark group-hover:text-primary mx-8 flex py-2 text-base dark:text-slate-300"
                     >Contact</a
                   >
+                </li>
+                <li class="flex items-center pl-8 mt-3 lg:mt-0 md:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -92,7 +108,7 @@
     <!-- ========================================== navbar section end ========================================== -->
 
     <!-- ========================================== heros section stard ========================================== -->
-    <section id="home" class="pt-36">
+    <section id="home" class="dark:bg-dark pt-36">
       <div class="container">
         <div class="flex flex-wrap">
           <!-- content text star -->
@@ -101,16 +117,16 @@
               class="text-primary text-primary text-base font-semibold md:text-xl"
             >
               Halo Semua 🖐️, Saya
-              <span class="text-dark mt-1 block text-4xl font-bold lg:text-5xl"
+              <span class="text-dark mt-1 block text-4xl font-bold lg:text-5xl dark:text-slate-300"
                 >Darul Arqam Albasri</span
               >
             </h1>
             <h2 class="text-secondary mb-5 text-lg font-medium lg:text-2xl">
-              Lecture & <span class="text-dark">Content Creator</span>
+              Lecture & <span class="text-dark dark:text-slate-300">Content Creator</span>
             </h2>
             <p class="text-secondary mb-10 leading-relaxed font-medium">
               Belajar web programming itu mudah dan menyenangkan bukan.
-              <span class="text-dark font-bold">bukan!</span>
+              <span class="text-dark font-bold dark:text-slate-300">bukan!</span>
             </p>
 
             <a
@@ -125,12 +141,12 @@
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-0">
               <img
-                src="image/profil-portfolio-tailwind-css.png"
+                src="public/image/profil-portfolio-tailwind-css.png"
                 alt=""
-                class="mx-auto max-w-full"
+                class="mx-auto max-w-full relative z-10"
               />
               <span
-                class="absolute -bottom-10 left-1/2 -z-10 -translate-x-1/2 md:scale-100"
+                class="absolute -bottom-10 left-1/2 -translate-x-1/2 md:scale-100"
               >
                 <svg
                   width="400"
@@ -154,14 +170,14 @@
     <!-- ========================================== heros section end ========================================== -->
 
     <!-- ========================================== about section start ========================================== -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-10 w-full px-4 lg:w-1/2">
             <h4 class="text-primary mb-3 text-lg font-bold uppercase">
               Tentang Saya
             </h4>
-            <h2 class="text-dark mb-5 max-w-md text-3xl font-bold lg:text-4xl">
+            <h2 class="text-dark mb-5 max-w-md text-3xl font-bold lg:text-4xl dark:text-slate-300">
               Yuk, belajar web programming di WPU
             </h2>
             <p class="text-secondary max-w-xl text-base font-medium lg:text-lg">
@@ -171,7 +187,7 @@
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3
-              class="text-dark mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl"
+              class="text-dark mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl dark:text-slate-300"
             >
               Mari Berteman
             </h3>
@@ -303,7 +319,7 @@
     <!-- ========================================== about section end ========================================== -->
 
     <!-- ========================================== portfolio section start ========================================== -->
-    <section id="portfolio" class="bg-slate-100 pt-36 pb-16">
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -311,7 +327,7 @@
               Portfolio
             </h4>
             <h2
-              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl"
+              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-slate-300"
             >
               Project Terbaru
             </h2>
@@ -329,9 +345,9 @@
           <!-- content portfolio 1 -->
           <div class="mb-12 p-4 lg:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
-              <img src="image/website1.webp" alt="" width="w-full" />
+              <img src="public/image/website1.webp" alt="" width="w-full" />
             </div>
-            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold">
+            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold dark:text-slate-300">
               Landing Page Darul Arqam Alba
             </h3>
             <p class="text-secondary text-base font-medium">
@@ -342,9 +358,9 @@
           <!-- content portfolio 2 -->
           <div class="mb-12 p-4 lg:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
-              <img src="image/website2.webp" alt="" width="w-full" />
+              <img src="public/image/website2.webp" alt="" width="w-full" />
             </div>
-            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold">
+            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold dark:text-slate-300">
               E-Commerce
             </h3>
             <p class="text-secondary text-base font-medium">
@@ -355,9 +371,9 @@
           <!-- content portfolio 3 -->
           <div class="mb-12 p-4 lg:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
-              <img src="image/website3.webp" alt="" width="w-full" />
+              <img src="public/image/website3.webp" alt="" width="w-full" />
             </div>
-            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold">
+            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold dark:text-slate-300">
               Technical Documentation
             </h3>
             <p class="text-secondary text-base font-medium">
@@ -368,9 +384,9 @@
           <!-- content portfolio 4 -->
           <div class="mb-12 p-4 lg:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
-              <img src="image/website4.webp" alt="" width="w-full" />
+              <img src="public/image/website4.webp" alt="" width="w-full" />
             </div>
-            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold">
+            <h3 class="text-dark mt-5 mb-3 text-xl font-semibold dark:text-slate-300">
               Tribute Page
             </h3>
             <p class="text-secondary text-base font-medium">
@@ -384,7 +400,7 @@
     <!-- ========================================== portfolio section end ========================================== -->
 
     <!-- ========================================== client section start ========================================== -->
-    <section id="clients" class="bg-slate-600 pt-36 pb-32">
+    <section id="clients" class="bg-slate-600 pt-36 pb-32 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
@@ -392,7 +408,7 @@
               Clients
             </h4>
             <h2
-              class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl"
             >
               Yang Pernah Bekerjasama
             </h2>
@@ -410,28 +426,28 @@
               href="#"
               class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
-              <img src="image/clients/logo_google.svg" alt="" />
+              <img src="public/image/clients/logo_google.svg" alt="" />
             </a>
             <!-- clients 2 -->
             <a
               href="#"
               class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
-              <img src="image/clients/logo_tokopedia.svg" alt="" />
+              <img src="public/image/clients/logo_tokopedia.svg" alt="" />
             </a>
             <!-- clients 3 -->
             <a
               href="#"
               class="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
-              <img src="image/clients/logo_nvidia.svg" alt="" />
+              <img src="public/image/clients/logo_nvidia.svg" alt="" />
             </a>
             <!-- clients 4 -->
             <a
               href="#"
               class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
-              <img src="image/clients/logo_gojek.svg" alt="" />
+              <img src="public/image/clients/logo_gojek.svg" alt="" />
             </a>
           </div>
         </div>
@@ -440,7 +456,7 @@
     <!-- ========================================== client section end ========================================== -->
 
     <!-- ========================================== blogs section start ========================================== -->
-    <section id="blog" class="bg-slate-100 pt-36 pb-32">
+    <section id="blog" class="bg-slate-100 pt-36 pb-32 dark:bg-slate-700">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-full text-center">
@@ -448,7 +464,7 @@
               Blog
             </h4>
             <h2
-              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl"
+              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-slate-300"
             >
               Tulisan terkini
             </h2>
@@ -462,17 +478,17 @@
         <div class="flex flex-wrap">
           <!-- artikel 1 -->
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
-              <img src="image/blogs/blog1.webp" alt="" class="w-full" />
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-6 dark:bg-slate-600">
+              <img src="public/image/blogs/blog1.webp" alt="" class="w-full" />
               <div class="px-6 py-8">
                 <h3>
                   <a
                     href="#"
-                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold"
+                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-slate-300"
                     >Tips Belajar Programming Lorem ipsum dolor sit.</a
                   >
                 </h3>
-                <p class="text-secondary mb-6 text-base font-medium">
+                <p class="text-secondary dark:text-slate-400 mb-6 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Blanditiis, consequuntur.
                 </p>
@@ -486,17 +502,17 @@
           </div>
           <!-- artikel 2 -->
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
-              <img src="image/blogs/blog2.webp" alt="" class="w-full" />
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-600">
+              <img src="public/image/blogs/blog2.webp" alt="" class="w-full" />
               <div class="px-6 py-8">
                 <h3>
                   <a
                     href="#"
-                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold"
+                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-slate-300"
                     >Review Keyboard GMMK Pro</a
                   >
                 </h3>
-                <p class="text-secondary mb-6 text-base font-medium">
+                <p class="text-secondary dark:text-slate-400 mb-6 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Blanditiis, consequuntur.
                 </p>
@@ -510,17 +526,17 @@
           </div>
           <!-- artikel 3 -->
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
-              <img src="image/blogs/blog3.webp" alt="" class="w-full" />
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-600">
+              <img src="public/image/blogs/blog3.webp" alt="" class="w-full" />
               <div class="px-6 py-8">
                 <h3>
                   <a
                     href="#"
-                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold"
+                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-slate-300"
                     >Tips Belajar Programming Lorem ipsum dolor sit.</a
                   >
                 </h3>
-                <p class="text-secondary mb-6 text-base font-medium">
+                <p class="text-secondary dark:text-slate-400 mb-6 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Blanditiis, consequuntur.
                 </p>
@@ -534,17 +550,17 @@
           </div>
           <!-- artikel 4 -->
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
-              <img src="image/blogs/blog4.webp" alt="" class="w-full" />
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-600">
+              <img src="public/image/blogs/blog4.webp" alt="" class="w-full" />
               <div class="px-6 py-8">
                 <h3>
                   <a
                     href="#"
-                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold"
+                    class="text-dark hover:text-primary mb-3 block truncate text-xl font-semibold dark:text-slate-300"
                     >Tips Belajar Programming Lorem ipsum dolor sit.</a
                   >
                 </h3>
-                <p class="text-secondary mb-6 text-base font-medium">
+                <p class="text-secondary dark:text-slate-400 mb-6 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Blanditiis, consequuntur.
                 </p>
@@ -562,7 +578,7 @@
     <!-- ========================================== blogs section end ========================================== -->
 
     <!-- ========================================== contact section start ========================================== -->
-    <section id="contact" class="pt-32 pb-32">
+    <section id="contact" class="pt-32 pb-32 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-full text-center">
@@ -570,7 +586,7 @@
               Contact
             </h4>
             <h2
-              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl"
+              class="text-dark mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl dark:text-slate-300"
             >
               Hubungi Kami
             </h2>
@@ -857,6 +873,6 @@
     </a>
     <!-- ========================================== back to top section end ========================================== -->
 
-    <script src="js/script.js"></script>
+    <script src="public/js/script.js"></script>
   </body>
 </html>
